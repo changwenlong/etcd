@@ -70,7 +70,7 @@ script:
           /bin/bash -c "GO_BUILD_FLAGS='-a -v' GOOS=darwin GOARCH=amd64 ./build"
         ;;
       windows-amd64)
-        docker run --rm \
+        docker run --rm  \
           --volume=`pwd`:/go/src/github.com/coreos/etcd gcr.io/etcd-development/etcd-test:go1.9.2 \
           /bin/bash -c "GO_BUILD_FLAGS='-a -v' GOOS=windows GOARCH=amd64 ./build"
         ;;
